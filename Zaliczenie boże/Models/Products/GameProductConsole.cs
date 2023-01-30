@@ -1,4 +1,4 @@
-﻿using Zaliczenie.Enums;
+﻿using Zaliczenie.Types;
 
 namespace Zaliczenie.Models.Products
 {
@@ -11,13 +11,11 @@ namespace Zaliczenie.Models.Products
             GameType = gameType;
         }
 
-        public DateTime RealaseDate { get; }
-
         public GameTypeConsole GameType { get; }
 
         public override void DisplayProduct(int number)
         {
-            Console.WriteLine($"{number}. {Name}, Price: {Price}PLN, Realase date: {RealaseDate}, Game type: {GameType}");
+            Console.WriteLine($"{number}. {Name}, Price: {Price}PLN, Game type: {GameType}");
         }
     }
 }

@@ -65,13 +65,13 @@ namespace Zaliczenie.Start
 
         private void EditStock()
         {
-            var stock = Items.GetInstance();
+            var items = Items.GetInstance();
 
             Console.WriteLine("Electronics products");
-            stock.Electronics.DisplayProducts();
+            items.Electronics.DisplayProducts();
             Console.WriteLine();
             Console.WriteLine("Games category products");
-            stock.Games.DisplayProducts();
+            items.Games.DisplayProducts();
             Console.WriteLine();
             Console.WriteLine("What you want to do?");
             Console.WriteLine("0. Undo.");
@@ -130,7 +130,7 @@ namespace Zaliczenie.Start
 
         private void AddElectronic()
         {
-            var stock = Items.GetInstance();
+            var items = Items.GetInstance();
             Console.WriteLine("Enter the name of the product");
             var name = Console.ReadLine();
 
@@ -140,7 +140,7 @@ namespace Zaliczenie.Start
             if (float.TryParse(price, out float result))
             {
                 Product product = new(name, result);
-                stock.Electronics.Products.Add(product);
+                items.Electronics.Products.Add(product);
             }
             else
             {
@@ -150,8 +150,8 @@ namespace Zaliczenie.Start
 
         private void RemoveFood()
         {
-            var stock = Items.GetInstance();
-            stock.Games.DisplayProducts();
+            var items = Items.GetInstance();
+            items.Games.DisplayProducts();
             Console.WriteLine("Which product do you want to remove? (0 - exit)");
             var productNum = Console.ReadLine();
             if (int.TryParse(productNum, out int productIndex))
@@ -160,7 +160,7 @@ namespace Zaliczenie.Start
                     return;
                 if (productIndex > 0)
                 {
-                    if (stock.Games.RemoveProductAtIndex(productIndex - 1))
+                    if (items.Games.RemoveProductAtIndex(productIndex - 1))
                     {
                         Console.WriteLine("The product has been removed");
                     }
@@ -182,8 +182,8 @@ namespace Zaliczenie.Start
 
         private void RemoveElectronic()
         {
-            var stock = Items.GetInstance();
-            stock.Electronics.DisplayProducts();
+            var items = Items.GetInstance();
+            items.Electronics.DisplayProducts();
             Console.WriteLine("Which product do you want to remove? (0 - exit)");
             var productNum = Console.ReadLine();
             if (int.TryParse(productNum, out int productIndex))
@@ -192,7 +192,7 @@ namespace Zaliczenie.Start
                     return;
                 if (productIndex > 0)
                 {
-                    if (stock.Electronics.RemoveProductAtIndex(productIndex - 1))
+                    if (items.Electronics.RemoveProductAtIndex(productIndex - 1))
                     {
                         Console.WriteLine("The product has been removed");
                     }

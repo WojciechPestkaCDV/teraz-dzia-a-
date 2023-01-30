@@ -1,5 +1,5 @@
 ﻿using System.Security.AccessControl;
-using Zaliczenie.Enums;
+using Zaliczenie.Types;
 
 namespace Zaliczenie.Models
 {

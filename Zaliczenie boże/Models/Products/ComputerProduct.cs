@@ -1,4 +1,4 @@
-﻿using Zaliczenie.Enums;
+﻿using Zaliczenie.Types;
 
 namespace Zaliczenie.Models.Products
 {

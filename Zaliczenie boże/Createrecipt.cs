@@ -1,4 +1,4 @@
-﻿using Zaliczenie.Enums;
+﻿using Zaliczenie.Types;
 using Zaliczenie.Models.Receipt;
 
 namespace Zaliczenie

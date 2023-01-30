@@ -18,6 +18,6 @@ namespace Zaliczenie
         }
 
         public ElectronicCategory Electronics { get; set; }
-        public FoodCategory Games { get; set; }
+        public GameCategory Games { get; set; }
     }
 }
